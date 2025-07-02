@@ -51,7 +51,7 @@ class ComidaControllerTest {
         comidaDTO.setId(1L);
         comidaDTO.setNombre("Pizza");
         comidaDTO.setCategoria("OTROS");
-        comidaDTO.setCantidad(2);
+        comidaDTO.setCantidad(2.0);
         comidaDTO.setFechaCaducidad("2024-12-31");
         comidaDTO.setUbicacion("Nevera");
     }

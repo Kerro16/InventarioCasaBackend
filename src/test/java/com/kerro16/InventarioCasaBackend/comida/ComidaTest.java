@@ -15,22 +15,24 @@ class ComidaTest {
         assertNotNull(comida);
         assertNull(comida.getId());
         assertNull(comida.getNombre());
-        assertNull(comida.getCantidad());
+        assertEquals(0.0, comida.getCantidad());
         assertNull(comida.getFechaCaducidad());
         assertNull(comida.getUbicacion());
         assertNull(comida.getCategoria());
+        assertEquals(0.0, comida.getPrecio());    
     }
 
     @Test
     void testConstructorConParametros() {
         Long id = 1L;
         String nombre = "Pizza";
-        Integer cantidad = 2;
+        double cantidad = 2.0;
         String fechaCaducidad = "2024-12-31";
         String ubicacion = "Nevera";
         Categoria categoria = Categoria.OTROS;
+        double precio = 10.0;
 
-        Comida comida = new Comida(id, nombre, cantidad, fechaCaducidad, ubicacion, categoria);
+        Comida comida = new Comida(id, nombre, cantidad, fechaCaducidad, ubicacion, categoria, precio);
 
         assertEquals(id, comida.getId());
         assertEquals(nombre, comida.getNombre());
@@ -38,6 +40,7 @@ class ComidaTest {
         assertEquals(fechaCaducidad, comida.getFechaCaducidad());
         assertEquals(ubicacion, comida.getUbicacion());
         assertEquals(categoria, comida.getCategoria());
+        assertEquals(precio, comida.getPrecio());
     }
 
     @Test
@@ -46,10 +49,11 @@ class ComidaTest {
 
         Long id = 1L;
         String nombre = "Pizza";
-        Integer cantidad = 2;
+        double cantidad = 2.0;
         String fechaCaducidad = "2024-12-31";
         String ubicacion = "Nevera";
         Categoria categoria = Categoria.OTROS;
+        double precio = 10.0;
 
         comida.setId(id);
         comida.setNombre(nombre);
@@ -57,6 +61,7 @@ class ComidaTest {
         comida.setFechaCaducidad(fechaCaducidad);
         comida.setUbicacion(ubicacion);
         comida.setCategoria(categoria);
+        comida.setPrecio(precio);
 
         assertEquals(id, comida.getId());
         assertEquals(nombre, comida.getNombre());
@@ -64,6 +69,7 @@ class ComidaTest {
         assertEquals(fechaCaducidad, comida.getFechaCaducidad());
         assertEquals(ubicacion, comida.getUbicacion());
         assertEquals(categoria, comida.getCategoria());
+        assertEquals(precio, comida.getPrecio());
     }
 
     @Test

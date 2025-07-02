@@ -5,19 +5,21 @@ public class ComidaDTO {
     private Long id;
     private String nombre;
     private String categoria;
-    private int cantidad;
+    private double cantidad;
     private String fechaCaducidad;
     private String ubicacion;
+    private double precio;
 
     public ComidaDTO() {
     }
-    public ComidaDTO(Long id, String nombre, String categoria, int cantidad, String fechaCaducidad, String ubicacion) {
+    public ComidaDTO(Long id, String nombre, String categoria, double cantidad, String fechaCaducidad, String ubicacion, double precio) {
         this.id = id;
         this.nombre = nombre;
         this.categoria = categoria;
         this.cantidad = cantidad;
         this.fechaCaducidad = fechaCaducidad;
         this.ubicacion = ubicacion;
+        this.precio = precio;
     }
 
     public Long getId() {
@@ -29,7 +31,7 @@ public class ComidaDTO {
     public String getCategoria() {
         return categoria;
     }
-    public int getCantidad() {
+    public double getCantidad() {
         return cantidad;
     }
     public String getFechaCaducidad() {
@@ -37,6 +39,10 @@ public class ComidaDTO {
     }
     public String getUbicacion() {
         return ubicacion;
+    }
+
+    public double getPrecio() {
+        return precio;
     }
     public void setId(Long id) {
         this.id = id;
@@ -47,7 +53,7 @@ public class ComidaDTO {
     public void setCategoria(String categoria) {
         this.categoria = categoria;
     }
-    public void setCantidad(int cantidad) {
+    public void setCantidad(double cantidad) {
         this.cantidad = cantidad;
     }
 
@@ -56,6 +62,9 @@ public class ComidaDTO {
     }
     public void setUbicacion(String ubicacion) {
         this.ubicacion = ubicacion;
+    }
+    public void setPrecio(double precio) {
+        this.precio = precio;
     }
     @Override
     public String toString() {
@@ -66,6 +75,7 @@ public class ComidaDTO {
                 ", cantidad=" + cantidad +
                 ", fechaCaducidad='" + fechaCaducidad + '\'' +
                 ", ubicacion='" + ubicacion + '\'' +
+                ", precio=" + precio +
                 '}';
     }
 

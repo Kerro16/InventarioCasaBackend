@@ -17,11 +17,12 @@ public class Comida {
     private Long id;
 
     private String nombre;
-    private Integer cantidad;
+    private double cantidad;
     private String fechaCaducidad;
     private String ubicacion;
     @Enumerated(EnumType.STRING)
     private Categoria categoria;
+    private double precio;
 
     public Long getId() {
         return id;
@@ -31,7 +32,7 @@ public class Comida {
         return nombre;
     }
 
-    public Integer getCantidad() {
+    public double getCantidad() {
         return cantidad;
     }
 
@@ -47,6 +48,10 @@ public class Comida {
         return categoria;
     }
 
+    public double getPrecio() {
+        return precio;
+    }
+
     public void setId(Long id) {
         this.id = id;
     }
@@ -55,7 +60,7 @@ public class Comida {
         this.nombre = nombre;
     }
 
-    public void setCantidad(Integer cantidad) {
+    public void setCantidad(double cantidad) {
         this.cantidad = cantidad;
     }
 
@@ -71,14 +76,19 @@ public class Comida {
         this.categoria = categoria;
     }
 
-    public Comida(Long id, String nombre, Integer cantidad, String fechaCaducidad, String ubicacion,
-            Categoria categoria) {
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    public Comida(Long id, String nombre, double cantidad2, String fechaCaducidad, String ubicacion,
+            Categoria categoria, double precio) {
         this.id = id;
         this.nombre = nombre;
-        this.cantidad = cantidad;
+        this.cantidad = cantidad2;
         this.fechaCaducidad = fechaCaducidad;
         this.ubicacion = ubicacion;
         this.categoria = categoria;
+        this.precio = precio;
     }
 
     public Comida() {

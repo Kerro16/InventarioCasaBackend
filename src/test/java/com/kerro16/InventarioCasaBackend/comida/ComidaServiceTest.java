@@ -1,4 +1,4 @@
-package com.kerro16.InventarioCasaBackend.service;
+package com.kerro16.InventarioCasaBackend.comida;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
@@ -20,6 +20,7 @@ import com.kerro16.InventarioCasaBackend.dto.ComidaDTO;
 import com.kerro16.InventarioCasaBackend.model.Categoria;
 import com.kerro16.InventarioCasaBackend.model.Comida;
 import com.kerro16.InventarioCasaBackend.repository.ComidaRepository;
+import com.kerro16.InventarioCasaBackend.service.ComidaService;
 import com.kerro16.InventarioCasaBackend.exception.comida.ComidaNotFoundException;
 
 @ExtendWith(MockitoExtension.class)
@@ -39,7 +40,7 @@ public class ComidaServiceTest {
         ComidaDTO comidaDTO = new ComidaDTO();
         comidaDTO.setNombre("Pizza");
         comidaDTO.setCategoria("OTROS");
-        comidaDTO.setCantidad(2);
+        comidaDTO.setCantidad(2.0);
         comidaDTO.setFechaCaducidad("2023-12-31");
         comidaDTO.setUbicacion("Nevera");
 
@@ -47,7 +48,7 @@ public class ComidaServiceTest {
         Comida comida = new Comida();
         comida.setNombre("Pizza");
         comida.setCategoria(Categoria.OTROS);
-        comida.setCantidad(2);
+        comida.setCantidad(2.0);
         comida.setFechaCaducidad("2023-12-31");
         comida.setUbicacion("Nevera");
 
@@ -60,7 +61,7 @@ public class ComidaServiceTest {
         assertNotNull(resultado);
         assertEquals("Pizza", resultado.getNombre());
         assertEquals("OTROS", resultado.getCategoria());
-        assertEquals(2, resultado.getCantidad());
+        assertEquals(2.0, resultado.getCantidad());
         assertEquals("2023-12-31", resultado.getFechaCaducidad());
         assertEquals("Nevera", resultado.getUbicacion());
 
@@ -111,7 +112,7 @@ public class ComidaServiceTest {
         ComidaDTO comidaDTO = new ComidaDTO();
         comidaDTO.setNombre("Pizza Actualizada");
         comidaDTO.setCategoria("OTROS");
-        comidaDTO.setCantidad(3);
+        comidaDTO.setCantidad(3.0);
         comidaDTO.setFechaCaducidad("2024-12-31");
         comidaDTO.setUbicacion("Congelador");
 
@@ -119,7 +120,7 @@ public class ComidaServiceTest {
         comidaExistente.setId(id);
         comidaExistente.setNombre("Pizza");
         comidaExistente.setCategoria(Categoria.OTROS);
-        comidaExistente.setCantidad(2);
+        comidaExistente.setCantidad(2.0);
         comidaExistente.setFechaCaducidad("2023-12-31");
         comidaExistente.setUbicacion("Nevera");
 
@@ -146,7 +147,7 @@ public class ComidaServiceTest {
         assertNotNull(resultado);
         assertEquals("Pizza Actualizada", resultado.getNombre());
         assertEquals("OTROS", resultado.getCategoria());
-        assertEquals(3, resultado.getCantidad());
+        assertEquals(3.0, resultado.getCantidad());
         assertEquals("2024-12-31", resultado.getFechaCaducidad());
         assertEquals("Congelador", resultado.getUbicacion());
         
