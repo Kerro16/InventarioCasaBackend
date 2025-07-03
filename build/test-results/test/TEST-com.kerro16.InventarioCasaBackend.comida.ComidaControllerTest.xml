@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kerro16.InventarioCasaBackend.comida.ComidaControllerTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2025-07-02T21:43:12.269Z" hostname="fedora" time="0.324">
+  <properties/>
+  <testcase name="testBuscarPorIdNoEncontrado()" classname="com.kerro16.InventarioCasaBackend.comida.ComidaControllerTest" time="0.109"/>
+  <testcase name="testListarComidas()" classname="com.kerro16.InventarioCasaBackend.comida.ComidaControllerTest" time="0.085"/>
+  <testcase name="testGuardarComidaError()" classname="com.kerro16.InventarioCasaBackend.comida.ComidaControllerTest" time="0.043"/>
+  <testcase name="testBuscarPorId()" classname="com.kerro16.InventarioCasaBackend.comida.ComidaControllerTest" time="0.008"/>
+  <testcase name="testActualizarComidaNoEncontrada()" classname="com.kerro16.InventarioCasaBackend.comida.ComidaControllerTest" time="0.015"/>
+  <testcase name="testBuscarPorCategoria()" classname="com.kerro16.InventarioCasaBackend.comida.ComidaControllerTest" time="0.011"/>
+  <testcase name="testListarComidasVacio()" classname="com.kerro16.InventarioCasaBackend.comida.ComidaControllerTest" time="0.007"/>
+  <testcase name="testActualizarComida()" classname="com.kerro16.InventarioCasaBackend.comida.ComidaControllerTest" time="0.011"/>
+  <testcase name="testBuscarPorNombre()" classname="com.kerro16.InventarioCasaBackend.comida.ComidaControllerTest" time="0.01"/>
+  <testcase name="testGuardarComida()" classname="com.kerro16.InventarioCasaBackend.comida.ComidaControllerTest" time="0.009"/>
+  <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.3)
+
+2025-07-02T15:43:10.711-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] c.k.I.comida.ComidaControllerTest        : Starting ComidaControllerTest using Java 21.0.7 with PID 101855 (started by kerro in /home/kerro/Documents/Proyectos/InventarioCasaBackend)
+2025-07-02T15:43:10.711-06:00 DEBUG 101855 --- [InventarioCasaBackend] [    Test worker] c.k.I.comida.ComidaControllerTest        : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-02T15:43:10.712-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] c.k.I.comida.ComidaControllerTest        : The following 1 profile is active: "test"
+2025-07-02T15:43:10.862-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-02T15:43:10.866-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 1 JPA repository interface.
+2025-07-02T15:43:11.456-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2025-07-02T15:43:11.484-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-02T15:43:11.485-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-02T15:43:11.542-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-02T15:43:11.545-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 826 ms
+2025-07-02T15:43:11.682-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-02T15:43:11.685-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-02T15:43:11.700-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-02T15:43:11.702-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-07-02T15:43:11.704-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2025-07-02T15:43:11.705-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-07-02T15:43:11.707-06:00  WARN 101855 --- [InventarioCasaBackend] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-02T15:43:11.708-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-02T15:43:11.739-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-02T15:43:11.740-06:00 DEBUG 101855 --- [InventarioCasaBackend] [    Test worker] org.hibernate.SQL                        : 
+    drop table if exists comida cascade 
+Hibernate: 
+    drop table if exists comida cascade 
+2025-07-02T15:43:11.752-06:00 DEBUG 101855 --- [InventarioCasaBackend] [    Test worker] org.hibernate.SQL                        : 
+    create table comida (
+        cantidad float(53) not null,
+        precio float(53) not null,
+        id bigint generated by default as identity,
+        fecha_caducidad varchar(255),
+        nombre varchar(255),
+        ubicacion varchar(255),
+        categoria enum ('BEBIDAS','CARNES','CEREALES','CONGELADOS','FRUTAS','LACTEOS','OTROS','SNACKS','VERDURAS'),
+        primary key (id)
+    )
+Hibernate: 
+    create table comida (
+        cantidad float(53) not null,
+        precio float(53) not null,
+        id bigint generated by default as identity,
+        fecha_caducidad varchar(255),
+        nombre varchar(255),
+        ubicacion varchar(255),
+        categoria enum ('BEBIDAS','CARNES','CEREALES','CONGELADOS','FRUTAS','LACTEOS','OTROS','SNACKS','VERDURAS'),
+        primary key (id)
+    )
+2025-07-02T15:43:11.756-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-02T15:43:11.839-06:00  WARN 101855 --- [InventarioCasaBackend] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-02T15:43:11.988-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+2025-07-02T15:43:11.988-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-07-02T15:43:11.993-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 5 ms
+2025-07-02T15:43:12.250-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 43337 (http) with context path '/'
+2025-07-02T15:43:12.261-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] c.k.I.comida.ComidaControllerTest        : Started ComidaControllerTest in 1.589 seconds (process running for 7.177)
+Comidas: [ComidaDTO{id=1, nombre='Pizza', categoria='OTROS', cantidad=2.0, fechaCaducidad='2024-12-31', ubicacion='Nevera', precio=0.0}]
+Comidas: []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

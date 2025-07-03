@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kerro16.InventarioCasaBackend.InventarioCasaBackendApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-07-02T21:43:10.245Z" hostname="fedora" time="0.402">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.kerro16.InventarioCasaBackend.InventarioCasaBackendApplicationTests" time="0.402"/>
+  <system-out><![CDATA[15:43:06.258 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.kerro16.InventarioCasaBackend.InventarioCasaBackendApplicationTests]: InventarioCasaBackendApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:43:06.373 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.kerro16.InventarioCasaBackend.InventarioCasaBackendApplication for test class com.kerro16.InventarioCasaBackend.InventarioCasaBackendApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.3)
+
+2025-07-02T15:43:06.806-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] .I.InventarioCasaBackendApplicationTests : Starting InventarioCasaBackendApplicationTests using Java 21.0.7 with PID 101855 (started by kerro in /home/kerro/Documents/Proyectos/InventarioCasaBackend)
+2025-07-02T15:43:06.807-06:00 DEBUG 101855 --- [InventarioCasaBackend] [    Test worker] .I.InventarioCasaBackendApplicationTests : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-02T15:43:06.808-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] .I.InventarioCasaBackendApplicationTests : The following 1 profile is active: "test"
+2025-07-02T15:43:07.369-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-02T15:43:07.437-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 1 JPA repository interface.
+2025-07-02T15:43:08.069-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-02T15:43:08.120-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-02T15:43:08.160-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-02T15:43:08.476-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-02T15:43:08.503-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-02T15:43:08.636-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-07-02T15:43:08.638-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-02T15:43:08.657-06:00  WARN 101855 --- [InventarioCasaBackend] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-02T15:43:08.673-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-02T15:43:09.266-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-02T15:43:09.276-06:00 DEBUG 101855 --- [InventarioCasaBackend] [    Test worker] org.hibernate.SQL                        : 
+    drop table if exists comida cascade 
+Hibernate: 
+    drop table if exists comida cascade 
+2025-07-02T15:43:09.282-06:00 DEBUG 101855 --- [InventarioCasaBackend] [    Test worker] org.hibernate.SQL                        : 
+    create table comida (
+        cantidad float(53) not null,
+        precio float(53) not null,
+        id bigint generated by default as identity,
+        fecha_caducidad varchar(255),
+        nombre varchar(255),
+        ubicacion varchar(255),
+        categoria enum ('BEBIDAS','CARNES','CEREALES','CONGELADOS','FRUTAS','LACTEOS','OTROS','SNACKS','VERDURAS'),
+        primary key (id)
+    )
+Hibernate: 
+    create table comida (
+        cantidad float(53) not null,
+        precio float(53) not null,
+        id bigint generated by default as identity,
+        fecha_caducidad varchar(255),
+        nombre varchar(255),
+        ubicacion varchar(255),
+        categoria enum ('BEBIDAS','CARNES','CEREALES','CONGELADOS','FRUTAS','LACTEOS','OTROS','SNACKS','VERDURAS'),
+        primary key (id)
+    )
+2025-07-02T15:43:09.295-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-02T15:43:09.821-06:00  WARN 101855 --- [InventarioCasaBackend] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-02T15:43:10.229-06:00  INFO 101855 --- [InventarioCasaBackend] [    Test worker] .I.InventarioCasaBackendApplicationTests : Started InventarioCasaBackendApplicationTests in 3.698 seconds (process running for 5.144)
+]]></system-out>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/home/kerro/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.17.6/17b32fd9f57deef02842f7f05abc4ad8127fe34e/byte-buddy-agent-1.17.6.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>
