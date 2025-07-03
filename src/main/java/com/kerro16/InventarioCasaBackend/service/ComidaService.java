@@ -1,5 +1,6 @@
 package com.kerro16.InventarioCasaBackend.service;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -86,6 +87,20 @@ public class ComidaService {
         }
         return comidas.stream()
                 .map(comida -> modelMapper.map(comida, ComidaDTO.class))
+                .collect(Collectors.toList());
+    }
+
+    public List<String> autocompletar(String prefijo) {
+        if (prefijo == null || prefijo.trim().isEmpty()) {
+            return Collections.emptyList();
+        }
+        
+        return comidaRepository.findAll().stream()
+                .map(Comida::getNombre)
+                .filter(nombre -> nombre.toLowerCase().startsWith(prefijo.toLowerCase()))
+                .distinct()
+                .sorted()
+                .limit(10)  // Limitar a 10 sugerencias
                 .collect(Collectors.toList());
     }
 
